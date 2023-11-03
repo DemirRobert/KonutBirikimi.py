@@ -26,7 +26,7 @@ def hesapla_ev_sayisi_ve_kira_geliri(aylik_birikim, yas, ev_fiyati, kira_gelir, 
 
 def main():
   st.title("Konut Birikim Hesaplayıcı")
-  st.write("Bu hesaplayıcı, konut birikimi yaparak emlak yatırımı yapan Hakan'ın sonuçlarını hesaplar.")
+  st.write("Bu hesaplayıcı, konut birikimi yaparak emlak yatırımı yapan kullacinin sonuçlarını hesaplar.")
   st.write("Lütfen aşağıdaki bilgileri doldurun.")
 
   aylik_birikim = st.number_input("Aylık birikim miktarı (TL):", min_value=0, step=1)
@@ -38,8 +38,8 @@ def main():
 
   if st.button("Hesapla"):
     toplam_ev_sayisi, toplam_kira_geliri = hesapla_ev_sayisi_ve_kira_geliri(aylik_birikim, yas, ev_fiyati, kira_gelir, kredi_suresi, pesinat_orani)
-    st.write(f"Hakan'ın 65 yaşına geldiğinde sahip olduğu ev sayısı: {toplam_ev_sayisi} adet")
-    st.write(f"Hakan'ın 65 yaşına geldiğinde elde ettiği toplam kira geliri: {toplam_kira_geliri:.2f} ₺")
+    st.write(f" 65 yaşına geldiğinizde sahip olduğunuz  ev sayısı: {toplam_ev_sayisi} adet")
+    st.write(f"65 yaşına geldiğinizde  elde ettiğiniz  toplam kira geliri: {toplam_kira_geliri:.2f} ₺")
 
 if __name__ == "__main__":
   main()
